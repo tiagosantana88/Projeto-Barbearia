@@ -31,6 +31,9 @@ class MobileNavbar {
     init() {
       if (this.mobileMenu) {
         this.addClickEvent();
+        this.navLinks.forEach((n)=>{
+          n.addEventListener("click", this.handleClick);
+        })
       }
       return this;
     }
